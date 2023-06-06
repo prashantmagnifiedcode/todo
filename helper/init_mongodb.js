@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 require("dotenv").config();
 mongoose
-  .connect("mongodb+srv://prashant:smart@5116@cluster0.kdodc.mongodb.net", {
-    dbName: "TaskCollection",
+  .connect(process.env.MONGODB_URI, {
+    dbName: process.env.DB_NAME,
     useUnifiedTopology: true,
     useNewUrlParser: true,
     
